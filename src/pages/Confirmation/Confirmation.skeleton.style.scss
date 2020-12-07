@@ -1,0 +1,45 @@
+.confirmation__skeleton {
+  .section {
+    padding: 10px;
+  }
+
+  .header {
+    background-color: white;
+    padding: 10px;
+  }
+
+  .notification {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__button {
+      margin-top: 10px;
+    }
+  }
+
+  .product {
+    align-items: flex-start;
+    &__name {
+      transform: none;
+    }
+
+    &__extra {
+      background-color: #eee;
+
+      &__option {
+        background-color: #f8f8f8;
+      }
+    }
+
+    &__quantity {
+      transform: none;
+      position: static;
+      background-color: rgba(0, 0, 0, 0.11);
+      align-self: flex-start;
+      margin: 0;
+      margin-right: 20px;
+    }
+  }
+}

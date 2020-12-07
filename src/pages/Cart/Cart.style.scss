@@ -1,0 +1,134 @@
+.cart {
+  padding: 50px 5px;
+
+  &__header {
+    text-align: center;
+    font-weight: 700;
+    color: #ff3e3e;
+    font-size: 1.5rem;
+  }
+
+  &__products {
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+
+    &__product {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 10px 5px;
+      border-bottom: 1px solid #eee;
+
+      div {
+        display: flex;
+        // align-items: center;
+      }
+
+      &__quantity {
+        color: #ff3e3e;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+
+      &__details {
+        &__container {
+          width: 100%;
+          max-width: 150px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      &__name {
+        font-weight: 700;
+        font-size: 0.96rem;
+      }
+
+      &__comment {
+        margin-top: 5px;
+        color: #555;
+        font-size: 0.8rem;
+      }
+
+      &__price {
+        width: max-content;
+        min-width: 70px;
+        text-align: right;
+      }
+      &__buttons {
+        padding-right: 10px;
+
+        &--edit {
+          background-color: #00b0b9;
+        }
+
+        &--delete {
+          background-color: #ff3e3e;
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          border: none;
+          border-radius: 50%;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__details {
+    &__detail {
+      padding: 10px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+
+      span:first-child {
+        font-weight: 400;
+        font-size: 0.86rem;
+      }
+
+      &__total {
+        background-color: #eee;
+        &__quantity {
+          color: #ff3e3e;
+          font-weight: 600 !important;
+          margin-right: 10px;
+        }
+
+        span:first-child {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__checkout {
+    position: fixed !important;
+    bottom: -1px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #00b0b9 !important;
+    width: 100%;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    border-radius: 0 !important;
+    max-width: 800px;
+    transform: translateX(-50%);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

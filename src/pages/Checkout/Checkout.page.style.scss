@@ -1,0 +1,70 @@
+.form {
+  padding: 50px 20px;
+  padding-bottom: 100px;
+
+  .inputs {
+    padding: 0 10px;
+    // display: flex;
+
+    &__input {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  div > h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+
+  .paymethods > div,
+  .service-tip > div {
+    flex-direction: row;
+  }
+
+  .cart {
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+  }
+
+  .submit {
+    width: 100%;
+    height: 50px;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 0;
+    background-color: #00b0b9 !important;
+    color: white;
+    font-weight: 600;
+    position: fixed;
+    border-radius: 0;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: env(safe-area-inset-bottom);
+
+    &:disabled {
+      background-color: #99edf1 !important;
+    }
+  }
+
+  #card {
+    margin-top: 10px;
+    border: 1px solid #eee;
+    padding: 10px 5px;
+    border-radius: 5px;
+  }
+
+  .terms {
+    span {
+      font-size: 0.8rem;
+
+      a {
+        color: #ff3e3e;
+        text-decoration: none;
+      }
+    }
+  }
+}

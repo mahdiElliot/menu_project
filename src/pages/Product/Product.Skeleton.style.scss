@@ -1,0 +1,35 @@
+.product__skeleton {
+  padding: 10px 20px;
+
+  .name {
+    margin-bottom: 20px;
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .add {
+    position: relative;
+    border-radius: 5px;
+
+    .quantity {
+      position: absolute;
+      z-index: 5;
+      background-color: rgba(0, 0, 0, 0.55) !important;
+      visibility: visible;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 3px;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}

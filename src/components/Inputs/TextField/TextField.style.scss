@@ -1,0 +1,11 @@
+.button {
+  &__container {
+    margin-bottom: 15px;
+    button {
+      background-color: #00b0b9 !important;
+      width: 100%;
+      color: white;
+      font-weight: 600;
+    }
+  }
+}

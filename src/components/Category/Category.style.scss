@@ -1,0 +1,24 @@
+.category {
+  // max-width: 150px;
+  // width: 150px;
+  user-select: none;
+  padding-right: 10px;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__image {
+    // width: 100%;
+    height: auto;
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  &__name {
+    text-align: center;
+    color: black;
+    font-size: 0.9rem;
+  }
+}
