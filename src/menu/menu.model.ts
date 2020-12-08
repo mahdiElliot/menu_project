@@ -1,5 +1,5 @@
-export interface Menu{
-    id: number,
+export interface Menu {
+  id: number,
   business_id: number,
   name: string,
   pickup: boolean,
