@@ -1,26 +1,20 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { MenuRepository } from './menu.repository';
 import { Menu } from './menu.entity';
 import { CreateMenuDto } from './dto/create-menu.dto';
+import { getManager } from 'typeorm';
 
 @Injectable()
 export class MenuService {
-    constructor(
-        @InjectRepository(MenuRepository)
-        private menuRepository: MenuRepository
-    ) { }
-
     async getMenuById(id: number): Promise<Menu> {
-        const found = await this.menuRepository.query("SELECT * FROM Menu WHERE id=1");
-        if (!found){
-            throw new NotFoundException('not');
+        const found = await getManager().query("SELECT * FROM  Menu WHERE id = $1", [id]);
+        if (Array.isArray(found) && !found.length) {
+            throw new NotFoundException('id not found');
         }
         return found;
     }
 
-    async createMenu(createMenuDto: CreateMenuDto): Promise<Menu>{
-        const {business_id, name, pickup, delivery, enabled, eatin} = createMenuDto;
+    async createMenu(createMenuDto: CreateMenuDto): Promise<Menu> {
+        const { business_id, name, pickup, delivery, enabled, eatin } = createMenuDto;
 
         const menu = new Menu();
         menu.business_id = business_id;

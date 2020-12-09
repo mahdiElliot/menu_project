@@ -1,6 +1,6 @@
-import {TypeOrmModuleOptions} from '@nestjs/typeorm';
+import { ConnectionOptions } from 'typeorm';
 
-export const typeOrmConfig: TypeOrmModuleOptions = {
+export const options: ConnectionOptions = {
     type: 'postgres',
     host: 'suleiman.db.elephantsql.com',
     port: 5432,
